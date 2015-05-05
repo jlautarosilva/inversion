@@ -37,7 +37,10 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+#To work with Geographic Information Systems
     'django.contrib.gis',
+#For generating django models
+    'django_extensions',
 #    'etc',
     'inv',
 )
