@@ -1,0 +1,5 @@
+Django==1.8.1
+django-extensions==1.5.3
+psycopg2==2.6
+pygraphviz==1.2
+six==1.9.0
