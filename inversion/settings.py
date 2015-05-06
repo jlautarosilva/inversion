@@ -41,8 +41,10 @@ INSTALLED_APPS = (
     'django.contrib.gis',
 #For generating django models
     'django_extensions',
-#    'etc',
+#Inversion
     'inv',
+#Load data from uft-8 shp to database
+    'load',
 )
 
 MIDDLEWARE_CLASSES = (

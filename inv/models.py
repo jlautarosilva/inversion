@@ -3,7 +3,7 @@ from django.contrib.gis.db import models
 #Implementar validadores para los integerfield
 from django.core.validators import MinValueValidator, MaxValueValidator
 
-class inversion(models.Model):
+class Inversion(models.Model):
 
     num_corr = models.AutoField(primary_key=True)
     ano_postul = models.IntegerField("in_value=1, max_value=9999",null=True, blank=True)
@@ -41,3 +41,6 @@ class inversion(models.Model):
 
     def __str__(self):
         return self.name
+
+#class convenio (models.Model):
+#    id_bip_t = models.Fo
