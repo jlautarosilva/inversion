@@ -13,7 +13,7 @@ class Inversion(models.Model):
     x = models.DecimalField(max_digits = 6, decimal_places = 3,null=True, blank=True)
     y = models.DecimalField(max_digits = 7, decimal_places = 6,null=True, blank=True)
     obs1 = models.IntegerField("OBS 1",null=True, blank=True) # 2
-    cod_comu = models.AutoField("Codigo comuna",null=True, blank=True) #4
+    cod_comu = models.IntegerField("Codigo comuna",null=True, blank=True) #4
     cod_corr = models.IntegerField("Codigo Corr",null=True, blank=True) #5
     cod_estado = models.IntegerField("Codigo Estado",null=True, blank=True) #2
     estado_postu = models.CharField('Estado de la Postulacion', max_length=18,null=True, blank=True)

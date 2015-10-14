@@ -86,8 +86,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'inversion',
-        'USER': 'postgres',
-        #'PASSWORD': 'postgresql.lautaro',
+        'USER': 'lautaro',
+        'PASSWORD': 'postgresql.lautaro',
     }
 }
 
