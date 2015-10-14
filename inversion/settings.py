@@ -39,6 +39,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 #To work with Geographic Information Systems
     'django.contrib.gis',
+#This show import-export buttons in admin interface
+    'import_export',
 #For generating django models
     'django_extensions',
 #Inversion

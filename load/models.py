@@ -20,7 +20,7 @@ class Arauco(models.Model):
     rate = models.CharField(max_length=254)
     fecha_rate = models.CharField(max_length=254)
     n_cer_core = models.CharField(max_length=254)
-    fecha_cer = models.CharField(max_length=254)
+    fecha_cer = models.CharField(max_length=254, null=True, blank=True)
     situacion = models.CharField(max_length=254)
     tipologia = models.CharField(max_length=254)
     meca_finan = models.CharField(max_length=254)
@@ -45,18 +45,18 @@ class Arauco(models.Model):
     comuna_1 = models.CharField(max_length=254)
     provincia = models.CharField(max_length=254)
     certif_co = models.FloatField()
-    fecha_cert = models.DateField()
+    fecha_cert = models.DateField(null=True, blank=True)
     tipologias = models.CharField(max_length=254)
     unidad_tec = models.CharField(max_length=254)
     subtit_ulo = models.FloatField()
     items = models.FloatField()
     asignacion = models.FloatField()
     resolucion = models.CharField(max_length=254)
-    fech_cmand = models.DateField()
+    fech_cmand = models.DateField(null=True, blank=True)
     monto_cman = models.FloatField()
 
     geom = models.MultiPointField(srid=32718)
     objects = models.GeoManager()
 
     def __str__(self):
-        return self.name
+        return str(self.id)

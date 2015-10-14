@@ -63,7 +63,9 @@ arauco_mapping = {
 }
 
 arauco_shp = os.path.abspath(os.path.join(os.path.dirname(__file__),'data/SHP/Arauco_corregido_utf-8.shp'))
+#arauco_shp = os.path.abspath(os.path.join(os.path.dirname(__file__),'data/SHP/3ARAUCO_CMANDATOcopia.shp'))
+
 
 def run(verbose=True):
     lm = LayerMapping(Arauco, arauco_shp, arauco_mapping, transform=False, encoding='utf-8')
-    lm.save(strict=True, verbose=verbose)
+    lm.save(strict=False, verbose=verbose)
