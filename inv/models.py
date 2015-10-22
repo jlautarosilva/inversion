@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.contrib.gis.db import models
 
 #Implementar validadores para los integerfield
@@ -39,8 +40,32 @@ class Inversion(models.Model):
     mpoly = models.MultiPolygonField()
     objects = models.GeoManager()
 
-    def __str__(self):
+    def __unicode__(self):
         return self.name
 
-#class convenio (models.Model):
-#    id_bip_t = models.Fo
+class Bip (models.Model):
+#    codigo_bip = models.IntegerField("Código BIP", primary_key=True)
+    codigo_bip = models.CharField("Código BIP", max_length=10,primary_key=True)
+    competencia = models.CharField("Competencia",max_length=10,null=True, blank=True)
+    comuna = models.CharField("Comuna",max_length=20,null=True,blank=True)
+    coordenadas = models.CharField("Coordenadas", max_length=9999, null=True, blank=True)
+#    coordenadas = models.GeometryField("Coordenadas", null=True, blank=True)
+    fecha_inicio_etapa_menor = models.CharField("Fecha de inicio Etapa Anterior", max_length=12,null=True, blank=True)
+    nombre = models.CharField("Nombre",max_length=200,null=True,blank=True)
+    nombre_adi = models.CharField("Nombre ADI",max_length=200,null=True,blank=True)
+    numero_region = models.IntegerField("Numero Region", null=True, blank=True)
+    pais = models.CharField("Pais",max_length=50,null=True,blank=True)
+    parte = models.IntegerField("Parte",null=True,blank=True)
+    primer_descriptor_sectorial =models.CharField("Primer descriptor sectorial",max_length=200,null=True,blank=True)
+    proceso = models.CharField("Proceso",max_length=20,null=True,blank=True)
+    provincia = models.CharField("Provincia",max_length=50,null=True,blank=True)
+    region = models.CharField("Región",max_length=100,null=True,blank=True)
+    sector = models.CharField("Sector",max_length=50,null=True,blank=True)
+    segundo_descriptor_sectorial = models.CharField("Segundo Descriptor Sectorial",max_length=200,null=True,blank=True)
+    subsector = models.CharField("Subsector",max_length=200,null=True,blank=True)
+    tercer_descriptor_sectorial = models.CharField("Tercer Descriptor Sectorial",max_length=200,null=True,blank=True)
+    tiene_adi = models.CharField("Tiene ADI",max_length=5,null=True,blank=True)
+    tipologia = models.CharField("Tipologia",max_length=20,null=True,blank=True)
+
+    def __unicode__(self):
+        return u'%s, %s, %s, %s' % (self.codigo_bip, self.nombre, self.sector, self.subsector)
