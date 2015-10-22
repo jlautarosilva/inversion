@@ -8,13 +8,16 @@ from import_export.admin import ImportExportModelAdmin
 from import_export import resources
 
 class BipResource(resources.ModelResource):
-#    coordenadas = fields.Field()
+
+# Agregar acá before_import o get_or_init_instance segun corresponda
+# Revisar https://github.com/django-import-export/django-import-export/issues/319
+
     class Meta:
         model = Bip
+        skip_unchanged = True
+        report_skipped = True
         import_id_fields = ['codigo_bip']
     
-#    def dehydrate(self, Bip):
-
 
 class BipAdmin(ImportExportModelAdmin):
     resource_class = BipResource
