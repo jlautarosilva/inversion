@@ -11,6 +11,8 @@ class BipResource(resources.ModelResource):
 
 # Agregar acá before_import o get_or_init_instance segun corresponda
 # Revisar https://github.com/django-import-export/django-import-export/issues/319
+    #def before_import(self, dataset, dry_run, **kwargs):
+        
 
     class Meta:
         model = Bip
@@ -26,4 +28,3 @@ class BipAdmin(ImportExportModelAdmin):
 
 admin.site.register(Inversion, admin.GeoModelAdmin)
 admin.site.register(Bip, BipAdmin)
-

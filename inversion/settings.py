@@ -47,6 +47,8 @@ INSTALLED_APPS = (
     'inv',
 #Load data from uft-8 shp to database
     'load',
+#SEIA
+    'seia',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -90,6 +92,14 @@ DATABASES = {
         'NAME': 'inversion',
         'USER': 'postgres',
         #'PASSWORD': 'postgresql.lautaro',
+    },
+    'geonode':{
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'NAME': 'califi_total15utm',
+        'USER': 'postgres',
+        'PASSWORD': 'ugit2.postgres',    
     }
 }
 
