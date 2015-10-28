@@ -1,0 +1,860 @@
+# This is an auto-generated Django model module.
+# You'll have to do the following manually to clean this up:
+#   * Rearrange models' order
+#   * Make sure each model has one field with primary_key=True
+#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
+# Feel free to rename the models, but don't rename db_table values or field names.
+#
+# Also note: You'll have to insert the output of 'django-admin sqlcustom [app_label]'
+# into your database.
+from __future__ import unicode_literals
+
+from django.contrib.gis.db import models
+
+
+class 05EntidadesSelecjunjulagos15(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    cod_loc = models.CharField(db_column='COD_LOC', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    cod_ent = models.CharField(db_column='COD_ENT', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    entidad = models.CharField(db_column='ENTIDAD', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    nom_com = models.CharField(db_column='NOM_COM', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    nom_dis = models.CharField(db_column='NOM_DIS', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    localidad = models.CharField(db_column='LOCALIDAD', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    tot_viv = models.FloatField(db_column='TOT_VIV', blank=True, null=True)  # Field name made lowercase.
+    tot_pers = models.FloatField(db_column='TOT_PERS', blank=True, null=True)  # Field name made lowercase.
+    caren_ap = models.FloatField(db_column='CAREN_AP', blank=True, null=True)  # Field name made lowercase.
+    caren_ele = models.FloatField(db_column='CAREN_ELE', blank=True, null=True)  # Field name made lowercase.
+    caren_ee = models.FloatField(db_column='CAREN_EE', blank=True, null=True)  # Field name made lowercase.
+    point_x = models.FloatField(db_column='POINT_X', blank=True, null=True)  # Field name made lowercase.
+    point_y = models.FloatField(db_column='POINT_Y', blank=True, null=True)  # Field name made lowercase.
+    id_ugit = models.BigIntegerField(db_column='ID_UGIT', blank=True, null=True)  # Field name made lowercase.
+    id_enti = models.FloatField(db_column='ID_ENTI', blank=True, null=True)  # Field name made lowercase.
+    n_jefe_fam = models.FloatField(db_column='N_JEFE_FAM', blank=True, null=True)  # Field name made lowercase.
+    n_inte_fam = models.FloatField(db_column='N_INTE_FAM', blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = '_05entidades_selecjunjulagos15'
+
+
+class 2CaracterCaletas(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    objectid = models.IntegerField(db_column='OBJECTID', blank=True, null=True)  # Field name made lowercase.
+    name = models.CharField(db_column='NAME', max_length=34, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=25, blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='PROVINCIA', max_length=25, blank=True, null=True)  # Field name made lowercase.
+    point_x = models.FloatField(db_column='POINT_X', blank=True, null=True)  # Field name made lowercase.
+    point_y = models.FloatField(db_column='POINT_Y', blank=True, null=True)  # Field name made lowercase.
+    informacio = models.CharField(db_column='INFORMACIO', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    concesion = models.CharField(db_column='Concesion', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    tipo_de_in = models.CharField(db_column='Tipo_de_In', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    num_inscri = models.FloatField(db_column='Num_Inscri', blank=True, null=True)  # Field name made lowercase.
+    tipo_embar = models.CharField(db_column='Tipo_Embar', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    tipo_recur = models.CharField(db_column='Tipo_Recur', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    especies = models.CharField(db_column='Especies', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    num_orga_field = models.CharField(db_column='Num__Orga_', max_length=254, blank=True, null=True)  # Field name made lowercase. Field renamed because it contained more than one '_' in a row. Field renamed because it ended with '_'.
+    num_viv_ca = models.CharField(db_column='Num_Viv_Ca', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    servicios_field = models.CharField(db_column='Servicios_', max_length=254, blank=True, null=True)  # Field name made lowercase. Field renamed because it ended with '_'.
+    conectivid = models.CharField(db_column='Conectivid', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    infraestru = models.CharField(db_column='Infraestru', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = '_2caracter_caletas'
+
+
+class 2FrilAgua181(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    n = models.FloatField(db_column='N', blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='PROVINCIA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    codigo_bip = models.FloatField(db_column='CODIGO_BIP', blank=True, null=True)  # Field name made lowercase.
+    nombre_pro = models.CharField(db_column='NOMBRE_PRO', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    monto = models.FloatField(db_column='MONTO', blank=True, null=True)  # Field name made lowercase.
+    x = models.FloatField(db_column='X', blank=True, null=True)  # Field name made lowercase.
+    y = models.FloatField(db_column='Y', blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = '_2fril_agua_18_1'
+
+
+class 3AraucoCmandatocopia(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    id = models.FloatField(db_column='ID', blank=True, null=True)  # Field name made lowercase.
+    fech_plani = models.DateTimeField(db_column='FECH_PLANI', blank=True, null=True)  # Field name made lowercase.
+    respon_eje = models.CharField(db_column='RESPON_EJE', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    codigo_bip = models.FloatField(db_column='CODIGO_BIP', blank=True, null=True)  # Field name made lowercase.
+    x = models.FloatField(db_column='X', blank=True, null=True)  # Field name made lowercase.
+    y = models.FloatField(db_column='Y', blank=True, null=True)  # Field name made lowercase.
+    nombre = models.CharField(db_column='NOMBRE', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    iniciativa = models.CharField(db_column='INICIATIVA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    etapa_post = models.CharField(db_column='ETAPA_POST', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    sector = models.CharField(db_column='SECTOR', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    area = models.CharField(db_column='AREA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    cos_totm_field = models.FloatField(db_column='COS_TOTM_', blank=True, null=True)  # Field name made lowercase. Field renamed because it ended with '_'.
+    financiera = models.CharField(db_column='FINANCIERA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    glosa_conv = models.CharField(db_column='GLOSA_CONV', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    rezago_mop = models.CharField(db_column='REZAGO_MOP', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    rate = models.CharField(db_column='RATE', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    fecha_rate = models.CharField(db_column='FECHA_RATE', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    n_cer_core = models.CharField(db_column='N_CER_CORE', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    fecha_cer = models.CharField(db_column='FECHA__CER', max_length=254, blank=True, null=True)  # Field name made lowercase. Field renamed because it contained more than one '_' in a row.
+    situacion = models.CharField(db_column='SITUACION', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    tipologia = models.CharField(db_column='TIPOLOGIA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    meca_finan = models.CharField(db_column='MECA_FINAN', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    cartera = models.CharField(db_column='CARTERA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    exitos = models.CharField(db_column='EXITOS', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    temporalid = models.CharField(db_column='TEMPORALID', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    field_2014 = models.CharField(db_column='_2014', max_length=254, blank=True, null=True)  # Field renamed because it started with '_'.
+    field_2015 = models.FloatField(db_column='_2015', blank=True, null=True)  # Field renamed because it started with '_'.
+    field_2016 = models.FloatField(db_column='_2016', blank=True, null=True)  # Field renamed because it started with '_'.
+    field_2017 = models.CharField(db_column='_2017', max_length=254, blank=True, null=True)  # Field renamed because it started with '_'.
+    field_2018 = models.CharField(db_column='_2018', max_length=254, blank=True, null=True)  # Field renamed because it started with '_'.
+    field_2019 = models.CharField(db_column='_2019', max_length=254, blank=True, null=True)  # Field renamed because it started with '_'.
+    field_2020 = models.CharField(db_column='_2020', max_length=254, blank=True, null=True)  # Field renamed because it started with '_'.
+    field_2021 = models.CharField(db_column='_2021', max_length=254, blank=True, null=True)  # Field renamed because it started with '_'.
+    field_2022 = models.CharField(db_column='_2022', max_length=254, blank=True, null=True)  # Field renamed because it started with '_'.
+    field_2023 = models.CharField(db_column='_2023', max_length=254, blank=True, null=True)  # Field renamed because it started with '_'.
+    n_corr_ugi = models.FloatField(db_column='N_CORR_UGI', blank=True, null=True)  # Field name made lowercase.
+    aao_presen = models.FloatField(db_column='AAO_PRESEN', blank=True, null=True)  # Field name made lowercase.
+    aao_presup = models.FloatField(db_column='AAO_PRESUP', blank=True, null=True)  # Field name made lowercase.
+    cod_bip = models.FloatField(db_column='COD_BIP', blank=True, null=True)  # Field name made lowercase.
+    nombre_del = models.CharField(db_column='NOMBRE_DEL', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    comuna_1 = models.CharField(db_column='COMUNA_1', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='PROVINCIA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    certif_co = models.FloatField(db_column='CERTIF__CO', blank=True, null=True)  # Field name made lowercase. Field renamed because it contained more than one '_' in a row.
+    fecha_cert = models.DateTimeField(db_column='FECHA_CERT', blank=True, null=True)  # Field name made lowercase.
+    tipologias = models.CharField(db_column='TIPOLOGIAS', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    unidad_tec = models.CharField(db_column='UNIDAD_TEC', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    subtit_ulo = models.FloatField(db_column='SUBTIT_ULO', blank=True, null=True)  # Field name made lowercase.
+    items = models.FloatField(db_column='ITEMS', blank=True, null=True)  # Field name made lowercase.
+    asignacion = models.FloatField(db_column='ASIGNACION', blank=True, null=True)  # Field name made lowercase.
+    resolucion = models.CharField(db_column='RESOLUCION', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    fech_cmand = models.DateTimeField(db_column='FECH_CMAND', blank=True, null=True)  # Field name made lowercase.
+    monto_cman = models.FloatField(db_column='MONTO_CMAN', blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = '_3arauco_cmandatocopia'
+
+
+class 3ProyectosCaletas(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    informacio = models.CharField(db_column='INFORMACIO', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    id_caleta = models.FloatField(db_column='ID_CALETA', blank=True, null=True)  # Field name made lowercase.
+    nombre = models.CharField(db_column='NOMBRE', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    ano_postul = models.FloatField(db_column='ANO_POSTUL', blank=True, null=True)  # Field name made lowercase.
+    id_bip_n = models.CharField(db_column='ID_BIP_N', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    cod_estado = models.CharField(db_column='COD_ESTADO', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    nom_proy = models.CharField(db_column='NOM_PROY', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    mont_pesos = models.FloatField(db_column='MONT_PESOS', blank=True, null=True)  # Field name made lowercase.
+    fuen_finan = models.CharField(db_column='FUEN_FINAN', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    nom_servic = models.CharField(db_column='NOM_SERVIC', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='PROVINCIA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    tipologias = models.CharField(db_column='TIPOLOGIAS', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    rate = models.CharField(db_column='RATE', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    x = models.FloatField(db_column='X', blank=True, null=True)  # Field name made lowercase.
+    y = models.FloatField(db_column='Y', blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = '_3proyectos_caletas'
+
+
+class AdiAltoBiobio(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    nombre = models.CharField(db_column='NOMBRE', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    numero = models.BigIntegerField(db_column='NUMERO', blank=True, null=True)  # Field name made lowercase.
+    territ_pla = models.CharField(db_column='TERRIT_PLA', max_length=60, blank=True, null=True)  # Field name made lowercase.
+    pob_1992 = models.BigIntegerField(db_column='POB_1992', blank=True, null=True)  # Field name made lowercase.
+    pob_2002 = models.BigIntegerField(db_column='POB_2002', blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='Provincia', max_length=30, blank=True, null=True)  # Field name made lowercase.
+    superficie = models.FloatField(blank=True, null=True)
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'adi_alto_biobio'
+
+
+class AdiLleuLleu(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    nombre_field = models.CharField(db_column='NOMBRE_', max_length=254, blank=True, null=True)  # Field name made lowercase. Field renamed because it ended with '_'.
+    propiedad = models.CharField(db_column='PROPIEDAD', max_length=40, blank=True, null=True)  # Field name made lowercase.
+    biodiversi = models.CharField(db_column='BIODIVERSI', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    priorizaci = models.CharField(db_column='PRIORIZACI', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    grado_pris = models.CharField(db_column='GRADO_PRIS', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    sp_cat_con = models.CharField(db_column='SP_CAT_CON', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    abreviaci = models.CharField(db_column='ABREVIACI', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    superf_ha = models.BigIntegerField(db_column='SUPERF_HA', blank=True, null=True)  # Field name made lowercase.
+    sup = models.FloatField(blank=True, null=True)
+    su = models.IntegerField(db_column='SU', blank=True, null=True)  # Field name made lowercase.
+    super = models.FloatField(db_column='SUPER', blank=True, null=True)  # Field name made lowercase.
+    superficie = models.FloatField(blank=True, null=True)
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'adi_lleu_lleu'
+
+
+class AprAmrbb(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(blank=True, null=True)
+    name = models.CharField(db_column='NAME', max_length=35, blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='Provincia', max_length=12, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='Comuna', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'apr_amrbb'
+
+
+class Caletasdecreto2014(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    objectid = models.IntegerField(db_column='OBJECTID', blank=True, null=True)  # Field name made lowercase.
+    name = models.CharField(db_column='NAME', max_length=34, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=25, blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='PROVINCIA', max_length=25, blank=True, null=True)  # Field name made lowercase.
+    point_x = models.FloatField(db_column='POINT_X', blank=True, null=True)  # Field name made lowercase.
+    point_y = models.FloatField(db_column='POINT_Y', blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'caletasdecreto_2014'
+
+
+class CalifiTotal15Utm(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    validacion = models.CharField(db_column='VALIDACION', max_length=10, blank=True, null=True)  # Field name made lowercase.
+    id = models.IntegerField(db_column='ID', blank=True, null=True)  # Field name made lowercase.
+    nombre = models.CharField(db_column='Nombre', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    desc_field = models.CharField(db_column='DESC_', max_length=254, blank=True, null=True)  # Field name made lowercase. Field renamed because it ended with '_'.
+    tipo = models.CharField(db_column='Tipo', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    region = models.CharField(db_column='Region', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    tipologaa = models.CharField(db_column='TipologAa', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    titular = models.CharField(db_column='Titular', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    inversiomm = models.FloatField(db_column='InversioMM', blank=True, null=True)  # Field name made lowercase.
+    fecha_pres = models.DateTimeField(db_column='Fecha_pres', blank=True, null=True)  # Field name made lowercase.
+    estado = models.CharField(db_column='Estado', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    fecha_cali = models.CharField(db_column='Fecha_cali', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    sector_pro = models.CharField(db_column='Sector_pro', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    log = models.FloatField(db_column='LOG', blank=True, null=True)  # Field name made lowercase.
+    lat = models.FloatField(db_column='LAT', blank=True, null=True)  # Field name made lowercase.
+    x = models.FloatField(db_column='X', blank=True, null=True)  # Field name made lowercase.
+    y = models.FloatField(db_column='Y', blank=True, null=True)  # Field name made lowercase.
+    datum = models.FloatField(db_column='DATUM', blank=True, null=True)  # Field name made lowercase.
+    huso = models.FloatField(db_column='HUSO', blank=True, null=True)  # Field name made lowercase.
+    hiperlink = models.CharField(db_column='HIPERLINK', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    ene = models.CharField(db_column='ENE', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    feb = models.CharField(db_column='FEB', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    maz = models.CharField(db_column='MAZ', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    abr = models.CharField(db_column='ABR', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    may = models.CharField(db_column='MAY', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    jun = models.CharField(db_column='JUN', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    jul = models.CharField(db_column='JUL', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    ago = models.CharField(db_column='AGO', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    sep = models.CharField(db_column='SEP', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    oct = models.CharField(db_column='OCT', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    nov = models.CharField(db_column='NOV', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    dic = models.CharField(db_column='DIC', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    mes_evalu = models.CharField(db_column='MES_EVALU', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    mes = models.CharField(db_column='MES', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    aao_aprob = models.BigIntegerField(db_column='AAO_APROB', blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'califi_total15utm'
+
+
+class ComunidadesIndigenas(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    nombre = models.CharField(max_length=254, blank=True, null=True)
+    comuna = models.CharField(max_length=254, blank=True, null=True)
+    nao = models.FloatField(db_column='NAo', blank=True, null=True)  # Field name made lowercase.
+    x = models.FloatField(db_column='X', blank=True, null=True)  # Field name made lowercase.
+    y = models.FloatField(db_column='Y', blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='PROVINCIA', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'comunidades_indigenas'
+
+
+class DestinosTuristicos(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    nom_prov = models.CharField(db_column='NOM_PROV', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    territorio = models.CharField(db_column='TERRITORIO', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    provincias = models.CharField(db_column='PROVINCIAS', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    nombre = models.CharField(db_column='Nombre', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    tipo_dest = models.CharField(db_column='Tipo_Dest', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    alcance = models.CharField(db_column='Alcance', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    localidade = models.CharField(db_column='Localidade', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    vocacion_1 = models.CharField(db_column='Vocacion_1', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    vocacion_2 = models.CharField(db_column='Vocacion_2', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    actividade = models.CharField(db_column='Actividade', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'destinos_turisticos'
+
+
+class EntidadesPobladas(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    objectid = models.IntegerField(db_column='OBJECTID', blank=True, null=True)  # Field name made lowercase.
+    cut = models.IntegerField(db_column='CUT', blank=True, null=True)  # Field name made lowercase.
+    area_c = models.CharField(db_column='AREA_C', max_length=6, blank=True, null=True)  # Field name made lowercase.
+    distrito = models.IntegerField(db_column='DISTRITO', blank=True, null=True)  # Field name made lowercase.
+    localidad = models.IntegerField(db_column='LOCALIDAD', blank=True, null=True)  # Field name made lowercase.
+    entidad = models.IntegerField(db_column='ENTIDAD', blank=True, null=True)  # Field name made lowercase.
+    categoria = models.IntegerField(db_column='CATEGORIA', blank=True, null=True)  # Field name made lowercase.
+    manzent_te = models.CharField(db_column='MANZENT_TE', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    manzent = models.BigIntegerField(db_column='MANZENT', blank=True, null=True)  # Field name made lowercase.
+    area = models.CharField(db_column='AREA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    cod_region = models.FloatField(db_column='COD_REGION', blank=True, null=True)  # Field name made lowercase.
+    nom_region = models.CharField(db_column='NOM_REGION', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    cod_provin = models.FloatField(db_column='COD_PROVIN', blank=True, null=True)  # Field name made lowercase.
+    nom_provin = models.CharField(db_column='NOM_PROVIN', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    cod_comuna = models.FloatField(db_column='COD_COMUNA', blank=True, null=True)  # Field name made lowercase.
+    nom_comuna = models.CharField(db_column='NOM_COMUNA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    distrito_1 = models.FloatField(db_column='DISTRITO_1', blank=True, null=True)  # Field name made lowercase.
+    cod_locali = models.FloatField(db_column='COD_LOCALI', blank=True, null=True)  # Field name made lowercase.
+    nom_locali = models.CharField(db_column='NOM_LOCALI', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    cod_entida = models.FloatField(db_column='COD_ENTIDA', blank=True, null=True)  # Field name made lowercase.
+    nom_entida = models.CharField(db_column='NOM_ENTIDA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    vomp = models.FloatField(db_column='VOMP', blank=True, null=True)  # Field name made lowercase.
+    voma = models.FloatField(db_column='VOMA', blank=True, null=True)  # Field name made lowercase.
+    vd = models.FloatField(db_column='VD', blank=True, null=True)  # Field name made lowercase.
+    vc = models.FloatField(db_column='VC', blank=True, null=True)  # Field name made lowercase.
+    tot_viv = models.FloatField(db_column='TOT_VIV', blank=True, null=True)  # Field name made lowercase.
+    servicios_field = models.FloatField(db_column='SERVICIOS_', blank=True, null=True)  # Field name made lowercase. Field renamed because it ended with '_'.
+    estab_educ = models.FloatField(db_column='ESTAB_EDUC', blank=True, null=True)  # Field name made lowercase.
+    estab_salu = models.FloatField(db_column='ESTAB_SALU', blank=True, null=True)  # Field name made lowercase.
+    sede_socia = models.FloatField(db_column='SEDE_SOCIA', blank=True, null=True)  # Field name made lowercase.
+    estab_depo = models.FloatField(db_column='ESTAB_DEPO', blank=True, null=True)  # Field name made lowercase.
+    estab_reli = models.FloatField(db_column='ESTAB_RELI', blank=True, null=True)  # Field name made lowercase.
+    estab_bien = models.FloatField(db_column='ESTAB_BIEN', blank=True, null=True)  # Field name made lowercase.
+    estab_come = models.FloatField(db_column='ESTAB_COME', blank=True, null=True)  # Field name made lowercase.
+    otro = models.FloatField(db_column='OTRO', blank=True, null=True)  # Field name made lowercase.
+    acceso_ent = models.CharField(db_column='ACCESO_ENT', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    inex_camin = models.CharField(db_column='INEX_CAMIN', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    prop_priva = models.CharField(db_column='PROP_PRIVA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    curso_agua = models.CharField(db_column='CURSO_AGUA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    acceso_col = models.CharField(db_column='ACCESO_COL', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    entidad_is = models.CharField(db_column='ENTIDAD_IS', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    trans_publ = models.CharField(db_column='TRANS_PUBL', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    vehiculo_p = models.CharField(db_column='VEHICULO_P', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    bicicleta = models.CharField(db_column='BICICLETA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    animales = models.CharField(db_column='ANIMALES', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    caminata = models.CharField(db_column='CAMINATA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    ferrocarri = models.CharField(db_column='FERROCARRI', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    trans_fluv = models.CharField(db_column='TRANS_FLUV', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    trans_aere = models.CharField(db_column='TRANS_AERE', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'entidades_pobladas'
+
+
+class EstablecimientosEducacionales(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    rbd = models.BigIntegerField(blank=True, null=True)
+    dv = models.BigIntegerField(db_column='DV', blank=True, null=True)  # Field name made lowercase.
+    nom_establ = models.CharField(db_column='NOM_ESTABL', max_length=104, blank=True, null=True)  # Field name made lowercase.
+    letra = models.CharField(db_column='LETRA', max_length=6, blank=True, null=True)  # Field name made lowercase.
+    numero = models.BigIntegerField(db_column='NUMERO', blank=True, null=True)  # Field name made lowercase.
+    dependenci = models.BigIntegerField(db_column='DEPENDENCI', blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=34, blank=True, null=True)  # Field name made lowercase.
+    direccion = models.CharField(db_column='DIRECCION', max_length=76, blank=True, null=True)  # Field name made lowercase.
+    referencia = models.CharField(db_column='REFERENCIA', max_length=188, blank=True, null=True)  # Field name made lowercase.
+    fono = models.BigIntegerField(db_column='FONO', blank=True, null=True)  # Field name made lowercase.
+    celular = models.BigIntegerField(db_column='CELULAR', blank=True, null=True)  # Field name made lowercase.
+    email_enla = models.CharField(db_column='EMAIL_ENLA', max_length=48, blank=True, null=True)  # Field name made lowercase.
+    area = models.IntegerField(db_column='AREA', blank=True, null=True)  # Field name made lowercase.
+    t_e1 = models.IntegerField(db_column='T_E1', blank=True, null=True)  # Field name made lowercase.
+    t_e2 = models.IntegerField(db_column='T_E2', blank=True, null=True)  # Field name made lowercase.
+    t_e3 = models.IntegerField(db_column='T_E3', blank=True, null=True)  # Field name made lowercase.
+    t_e4 = models.IntegerField(db_column='T_E4', blank=True, null=True)  # Field name made lowercase.
+    t_e5 = models.IntegerField(db_column='T_E5', blank=True, null=True)  # Field name made lowercase.
+    t_e6 = models.IntegerField(db_column='T_E6', blank=True, null=True)  # Field name made lowercase.
+    t_e7 = models.IntegerField(db_column='T_E7', blank=True, null=True)  # Field name made lowercase.
+    director = models.CharField(db_column='DIRECTOR', max_length=57, blank=True, null=True)  # Field name made lowercase.
+    matri_11 = models.BigIntegerField(db_column='MATRI_11', blank=True, null=True)  # Field name made lowercase.
+    docent_10 = models.BigIntegerField(db_column='DOCENT_10', blank=True, null=True)  # Field name made lowercase.
+    asisten_10 = models.BigIntegerField(db_column='ASISTEN_10', blank=True, null=True)  # Field name made lowercase.
+    basic_11 = models.CharField(db_column='BASIC_11', max_length=26, blank=True, null=True)  # Field name made lowercase.
+    media_11_field = models.FloatField(db_column='MEDIA_11_', blank=True, null=True)  # Field name made lowercase. Field renamed because it ended with '_'.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'establecimientos_educacionales'
+
+
+class FondoSocial(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    cod_loc = models.CharField(db_column='COD_LOC', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    cod_ent = models.CharField(db_column='COD_ENT', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    entidad = models.CharField(db_column='ENTIDAD', max_length=100, blank=True, null=True)  # Field name made lowercase.
+    nom_com = models.CharField(db_column='NOM_COM', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    nom_dis = models.CharField(db_column='NOM_DIS', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    localidad = models.CharField(db_column='LOCALIDAD', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    tot_viv = models.FloatField(db_column='TOT_VIV', blank=True, null=True)  # Field name made lowercase.
+    tot_pers = models.FloatField(db_column='TOT_PERS', blank=True, null=True)  # Field name made lowercase.
+    caren_ap = models.FloatField(db_column='CAREN_AP', blank=True, null=True)  # Field name made lowercase.
+    caren_ele = models.FloatField(db_column='CAREN_ELE', blank=True, null=True)  # Field name made lowercase.
+    caren_ee = models.FloatField(db_column='CAREN_EE', blank=True, null=True)  # Field name made lowercase.
+    point_x = models.FloatField(db_column='POINT_X', blank=True, null=True)  # Field name made lowercase.
+    point_y = models.FloatField(db_column='POINT_Y', blank=True, null=True)  # Field name made lowercase.
+    id_ugit = models.BigIntegerField(db_column='ID_UGIT', blank=True, null=True)  # Field name made lowercase.
+    org_nom = models.CharField(db_column='ORG_NOM', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    org_comuna = models.CharField(db_column='ORG_COMUNA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    id_ugit_1 = models.FloatField(db_column='ID_ugit_1', blank=True, null=True)  # Field name made lowercase.
+    nom_benef = models.CharField(db_column='NOM_BENEF', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    direc_bene = models.CharField(db_column='DIREC_BENE', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    res_resul = models.CharField(db_column='RES_RESUL', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    mon_solici = models.FloatField(db_column='MON_SOLICI', blank=True, null=True)  # Field name made lowercase.
+    costo_tot = models.FloatField(db_column='COSTO_TOT', blank=True, null=True)  # Field name made lowercase.
+    proy_descr = models.CharField(db_column='PROY_DESCR', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'fondo_social'
+
+
+class Fril2014Utm(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    n = models.FloatField(db_column='N', blank=True, null=True)  # Field name made lowercase.
+    cod_bip = models.FloatField(db_column='COD_BIP', blank=True, null=True)  # Field name made lowercase.
+    x = models.FloatField(db_column='X', blank=True, null=True)  # Field name made lowercase.
+    y = models.FloatField(db_column='Y', blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='PROVINCIA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    proyecto = models.CharField(db_column='PROYECTO', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    monto_fndr = models.FloatField(db_column='MONTO_FNDR', blank=True, null=True)  # Field name made lowercase.
+    linea_pres = models.FloatField(db_column='LINEA_PRES', blank=True, null=True)  # Field name made lowercase.
+    estdo_anas = models.CharField(db_column='ESTDO_ANAS', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    tipo_fril = models.CharField(db_column='TIPO_FRIL', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    seleccion = models.CharField(db_column='SELECCION', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    selec_doc_field = models.DateTimeField(db_column='SELEC_DOC_', blank=True, null=True)  # Field name made lowercase. Field renamed because it ended with '_'.
+    carga = models.CharField(db_column='CARGA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    consejo = models.CharField(db_column='CONSEJO', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    n_cert_cor = models.FloatField(db_column='N_CERT_COR', blank=True, null=True)  # Field name made lowercase.
+    fecha_cert = models.DateTimeField(db_column='FECHA_CERT', blank=True, null=True)  # Field name made lowercase.
+    respon_adm = models.CharField(db_column='RESPON_ADM', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    fech_deriv = models.FloatField(db_column='FECH_DERIV', blank=True, null=True)  # Field name made lowercase.
+    fech_admis = models.DateTimeField(db_column='FECH_ADMIS', blank=True, null=True)  # Field name made lowercase.
+    resul_admi = models.CharField(db_column='RESUL_ADMI', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    semaforiza = models.DateTimeField(db_column='SEMAFORIZA', blank=True, null=True)  # Field name made lowercase.
+    linea_pr_1 = models.CharField(db_column='LINEA_PR_1', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    tipog_proy = models.CharField(db_column='TIPOG_PROY', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    ord = models.FloatField(db_column='ORD', blank=True, null=True)  # Field name made lowercase.
+    fecha = models.CharField(db_column='FECHA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    memo_fndr = models.CharField(db_column='MEMO_FNDR', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    fecha1 = models.DateTimeField(db_column='FECHA1', blank=True, null=True)  # Field name made lowercase.
+    marco_pres = models.CharField(db_column='MARCO_PRES', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    selec_marc = models.CharField(db_column='SELEC_MARC', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    bip_carpet = models.CharField(db_column='BIP_CARPET', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    bip_rs = models.CharField(db_column='BIP_RS', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    kalku_carp = models.CharField(db_column='KALKU_CARP', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    kalku_rs = models.CharField(db_column='KALKU_RS', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    point_x = models.FloatField(db_column='POINT_X', blank=True, null=True)  # Field name made lowercase.
+    point_y = models.FloatField(db_column='POINT_Y', blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'fril2014utm'
+
+
+class IdiLineas(models.Model):
+    gid = models.AutoField(primary_key=True)
+    objectid = models.DecimalField(max_digits=10, decimal_places=0, blank=True, null=True)
+    cod_bip = models.CharField(max_length=254, blank=True, null=True)
+    nombre = models.CharField(max_length=254, blank=True, null=True)
+    tipologi = models.CharField(max_length=254, blank=True, null=True)
+    region = models.CharField(max_length=254, blank=True, null=True)
+    provinci = models.CharField(max_length=254, blank=True, null=True)
+    comuna = models.CharField(max_length=254, blank=True, null=True)
+    sector = models.CharField(max_length=254, blank=True, null=True)
+    subsecto = models.CharField(max_length=254, blank=True, null=True)
+    inst_res = models.CharField(max_length=254, blank=True, null=True)
+    ano_pos = models.DecimalField(max_digits=65535, decimal_places=65535, blank=True, null=True)
+    etapa = models.CharField(max_length=254, blank=True, null=True)
+    rate = models.CharField(max_length=254, blank=True, null=True)
+    fec_rate = models.DateField(blank=True, null=True)
+    ano_rate = models.DecimalField(max_digits=65535, decimal_places=65535, blank=True, null=True)
+    situacio = models.CharField(max_length=254, blank=True, null=True)
+    est_fin = models.CharField(max_length=254, blank=True, null=True)
+    ficha_idi = models.CharField(max_length=254, blank=True, null=True)
+    shape_leng = models.DecimalField(max_digits=65535, decimal_places=65535, blank=True, null=True)
+    geom = models.MultiLineStringField(srid=32719, blank=True, null=True)
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'idi_lineas'
+
+
+class IdiPuntos(models.Model):
+    gid = models.AutoField(primary_key=True)
+    cod_bip = models.CharField(max_length=254, blank=True, null=True)
+    nombre = models.CharField(max_length=254, blank=True, null=True)
+    tipologi = models.CharField(max_length=254, blank=True, null=True)
+    region = models.CharField(max_length=254, blank=True, null=True)
+    provinci = models.CharField(max_length=254, blank=True, null=True)
+    comuna = models.CharField(max_length=254, blank=True, null=True)
+    sector = models.CharField(max_length=254, blank=True, null=True)
+    subsecto = models.CharField(max_length=254, blank=True, null=True)
+    inst_res = models.CharField(max_length=254, blank=True, null=True)
+    ano_pos = models.FloatField(blank=True, null=True)
+    etapa = models.CharField(max_length=254, blank=True, null=True)
+    rate = models.CharField(max_length=254, blank=True, null=True)
+    fec_rate = models.DateField(blank=True, null=True)
+    ano_rate = models.FloatField(blank=True, null=True)
+    situacio = models.CharField(max_length=254, blank=True, null=True)
+    est_fin = models.CharField(max_length=254, blank=True, null=True)
+    ficha_idi = models.CharField(max_length=254, blank=True, null=True)
+    geom = models.PointField(srid=32719, blank=True, null=True)
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'idi_puntos'
+
+
+class IdiPuntos32718(models.Model):
+    geom = models.GeometryField(srid=0, blank=True, null=True)
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'idi_puntos_32718'
+
+
+class IncendiosForestales201314(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=0, blank=True, null=True)
+    forestal = models.CharField(db_column='FORESTAL', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    sector = models.CharField(db_column='SECTOR', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'incendios_forestales2013_14'
+
+
+class Jardines(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    name = models.CharField(db_column='NAME', max_length=8, blank=True, null=True)  # Field name made lowercase.
+    kml_folder = models.CharField(db_column='KML_FOLDER', max_length=23, blank=True, null=True)  # Field name made lowercase.
+    elevation = models.IntegerField(db_column='ELEVATION', blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='PROVINCIA', max_length=13, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    territorio = models.CharField(db_column='TERRITORIO', max_length=18, blank=True, null=True)  # Field name made lowercase.
+    nombre = models.CharField(db_column='NOMBRE', max_length=36, blank=True, null=True)  # Field name made lowercase.
+    directora_field = models.CharField(db_column='DIRECTORA_', max_length=34, blank=True, null=True)  # Field name made lowercase. Field renamed because it ended with '_'.
+    ruralidad = models.CharField(db_column='RURALIDAD', max_length=11, blank=True, null=True)  # Field name made lowercase.
+    direccion = models.CharField(db_column='DIRECCION', max_length=112, blank=True, null=True)  # Field name made lowercase.
+    point_x = models.FloatField(db_column='POINT_X', blank=True, null=True)  # Field name made lowercase.
+    point_y = models.FloatField(db_column='POINT_Y', blank=True, null=True)  # Field name made lowercase.
+    n_niveles = models.IntegerField(db_column='N_NIVELES', blank=True, null=True)  # Field name made lowercase.
+    telefono = models.CharField(db_column='TELEFONO', max_length=25, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'jardines'
+
+
+class LimComunas1(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    cod_prov = models.CharField(db_column='COD_PROV', max_length=10, blank=True, null=True)  # Field name made lowercase.
+    nom_prov = models.CharField(db_column='NOM_PROV', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    cod_com = models.CharField(db_column='COD_COM', max_length=10, blank=True, null=True)  # Field name made lowercase.
+    nom_com = models.CharField(db_column='NOM_COM', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    territorio = models.CharField(db_column='TERRITORIO', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=40, blank=True, null=True)  # Field name made lowercase.
+    comuna1 = models.CharField(db_column='COMUNA1', max_length=40, blank=True, null=True)  # Field name made lowercase.
+    provincias = models.CharField(db_column='PROVINCIAS', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'lim_comunas_1'
+
+
+class LimProvinciales(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    cod_prov = models.CharField(db_column='COD_PROV', max_length=10, blank=True, null=True)  # Field name made lowercase.
+    nom_prov = models.CharField(db_column='NOM_PROV', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='Provincia', max_length=10, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'lim_provinciales'
+
+
+class PrcSppUtmWgs84H18(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    zona_p = models.CharField(db_column='ZONA_P', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    leyenda = models.CharField(db_column='LEYENDA', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    layer_cad = models.CharField(db_column='LAYER_CAD', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'prc_spp_utm_wgs84h18'
+
+
+class ProyectosRegionDelBioBio(models.Model):
+    gid = models.AutoField(primary_key=True)
+    ano_postul = models.DecimalField(max_digits=65535, decimal_places=65535, blank=True, null=True)
+    situacion = models.CharField(max_length=254, blank=True, null=True)
+    id_bip_n = models.CharField(max_length=254, blank=True, null=True)
+    x = models.DecimalField(max_digits=65535, decimal_places=65535, blank=True, null=True)
+    y = models.DecimalField(max_digits=65535, decimal_places=65535, blank=True, null=True)
+    obs = models.CharField(max_length=254, blank=True, null=True)
+    estado_pos = models.CharField(max_length=254, blank=True, null=True)
+    tipo_info = models.CharField(max_length=254, blank=True, null=True)
+    nom_proy = models.CharField(max_length=254, blank=True, null=True)
+    mat_financ = models.CharField(max_length=254, blank=True, null=True)
+    mont_m_field = models.DecimalField(db_column='mont_m_', max_digits=65535, decimal_places=65535, blank=True, null=True)  # Field renamed because it ended with '_'.
+    fut_finan = models.CharField(max_length=254, blank=True, null=True)
+    comuna = models.CharField(max_length=254, blank=True, null=True)
+    provincia = models.CharField(max_length=254, blank=True, null=True)
+    tipologias = models.CharField(max_length=254, blank=True, null=True)
+    unidad_geo = models.FloatField(blank=True, null=True)
+    unidad_01 = models.FloatField(db_column='unidad__01', blank=True, null=True)  # Field renamed because it contained more than one '_' in a row.
+    geom = models.PointField(srid=32718, blank=True, null=True)
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'proyectos_region_del_bio_bio'
+
+
+class ReclasificacionOcurrenciaIncendios(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(blank=True, null=True)
+    objectid = models.IntegerField(db_column='OBJECTID', blank=True, null=True)  # Field name made lowercase.
+    ocurrencia = models.FloatField(db_column='OCURRENCIA', blank=True, null=True)  # Field name made lowercase.
+    name = models.CharField(db_column='NAME', max_length=1, blank=True, null=True)  # Field name made lowercase.
+    ocurrenc_1 = models.FloatField(db_column='OCURRENC_1', blank=True, null=True)  # Field name made lowercase.
+    rango = models.CharField(db_column='Rango', max_length=20, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'reclasificacion_ocurrencia_incendios'
+
+
+class ResiduosSolidos(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    nom_instal = models.CharField(db_column='NOM_INSTAL', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    prop_insta = models.CharField(db_column='PROP_INSTA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    comuna_dis = models.CharField(db_column='COMUNA_DIS', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    auto_sanit = models.CharField(db_column='AUTO_SANIT', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    rca = models.CharField(db_column='RCA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    pobla_aten = models.CharField(db_column='POBLA_ATEN', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    res_recibi = models.CharField(db_column='RES_RECIBI', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    monto_anua = models.FloatField(db_column='MONTO_ANUA', blank=True, null=True)  # Field name made lowercase.
+    ppc_kg_hab = models.CharField(db_column='PPC_kg_hab', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    utm_norte = models.FloatField(db_column='UTM_NORTE', blank=True, null=True)  # Field name made lowercase.
+    utm_este = models.FloatField(db_column='UTM_ESTE', blank=True, null=True)  # Field name made lowercase.
+    fte_coor = models.CharField(db_column='FTE__COOR', max_length=254, blank=True, null=True)  # Field name made lowercase. Field renamed because it contained more than one '_' in a row.
+    comentario = models.CharField(db_column='COMENTARIO', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'residuos_solidos'
+
+
+class SubTerritorios2015(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    id = models.IntegerField(db_column='Id', blank=True, null=True)  # Field name made lowercase.
+    subterrito = models.CharField(db_column='Subterrito', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    nom_com = models.CharField(db_column='NOM_COM', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    territorio = models.CharField(db_column='TERRITORIO', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    area = models.FloatField(db_column='AREA', blank=True, null=True)  # Field name made lowercase.
+    local = models.CharField(db_column='LOCAL', max_length=200, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'sub_territorios2015'
+
+
+class Subdere14(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.PointField(srid=32718, blank=True, null=True)
+    n = models.FloatField(blank=True, null=True)
+    comuna = models.CharField(db_column='COMUNA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    iniciativa = models.CharField(db_column='INICIATIVA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    req_imple = models.CharField(db_column='REQ_IMPLE', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    monto = models.FloatField(db_column='MONTO', blank=True, null=True)  # Field name made lowercase.
+    inst_res = models.CharField(db_column='INST_RES', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    observacio = models.CharField(db_column='OBSERVACIO', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    num_benef = models.FloatField(db_column='NUM_BENEF', blank=True, null=True)  # Field name made lowercase.
+    ava_finan = models.FloatField(db_column='AVA_FINAN', blank=True, null=True)  # Field name made lowercase.
+    obs = models.CharField(db_column='OBS', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    x = models.FloatField(db_column='X', blank=True, null=True)  # Field name made lowercase.
+    y = models.FloatField(db_column='Y', blank=True, null=True)  # Field name made lowercase.
+    huso = models.CharField(db_column='HUSO', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'subdere14'
+
+
+class Territorios2015(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    territorio = models.CharField(db_column='Territorio', max_length=30, blank=True, null=True)  # Field name made lowercase.
+    territor_1 = models.CharField(db_column='Territor_1', max_length=74, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'territorios2015'
+
+
+class TerritoriosAislados(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    cod_prov = models.CharField(db_column='COD_PROV', max_length=10, blank=True, null=True)  # Field name made lowercase.
+    nom_prov = models.CharField(db_column='NOM_PROV', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    cod_com = models.CharField(db_column='COD_COM', max_length=10, blank=True, null=True)  # Field name made lowercase.
+    nom_com = models.CharField(db_column='NOM_COM', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    territorio = models.CharField(db_column='TERRITORIO', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=40, blank=True, null=True)  # Field name made lowercase.
+    comuna1 = models.CharField(db_column='COMUNA1', max_length=40, blank=True, null=True)  # Field name made lowercase.
+    provincias = models.CharField(db_column='PROVINCIAS', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    fid_1 = models.IntegerField(db_column='FID_1', blank=True, null=True)  # Field name made lowercase.
+    cut_2010 = models.BigIntegerField(db_column='CUT_2010', blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='PROVINCIA', max_length=11, blank=True, null=True)  # Field name made lowercase.
+    point_x = models.BigIntegerField(db_column='POINT_X', blank=True, null=True)  # Field name made lowercase.
+    point_y = models.BigIntegerField(db_column='POINT_Y', blank=True, null=True)  # Field name made lowercase.
+    comuna1_1 = models.CharField(db_column='COMUNA1_1', max_length=40, blank=True, null=True)  # Field name made lowercase.
+    aisl_estru = models.FloatField(db_column='AISL_ESTRU', blank=True, null=True)  # Field name made lowercase.
+    grado_inte = models.FloatField(db_column='GRADO_INTE', blank=True, null=True)  # Field name made lowercase.
+    indice_ais = models.FloatField(db_column='INDICE_AIS', blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'territorios_aislados'
+
+
+class TitulosMerced(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    origen = models.CharField(db_column='ORIGEN', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    tema = models.CharField(db_column='TEMA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    subtema = models.CharField(db_column='SUBTEMA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    layer = models.CharField(db_column='LAYER', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    region = models.CharField(db_column='REGION', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    provincia = models.CharField(db_column='PROVINCIA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    comuna = models.CharField(db_column='COMUNA', max_length=254, blank=True, null=True)  # Field name made lowercase.
+    sector = models.CharField(db_column='SECTOR', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    comunidad = models.CharField(db_column='COMUNIDAD', max_length=23, blank=True, null=True)  # Field name made lowercase.
+    tm = models.FloatField(db_column='TM', blank=True, null=True)  # Field name made lowercase.
+    letra = models.CharField(db_column='LETRA', max_length=7, blank=True, null=True)  # Field name made lowercase.
+    aao = models.FloatField(db_column='AAO', blank=True, null=True)  # Field name made lowercase.
+    superficie = models.FloatField(db_column='SUPERFICIE', blank=True, null=True)  # Field name made lowercase.
+    superfic_1 = models.FloatField(blank=True, null=True)
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'titulos_merced'
+
+
+class Uv(models.Model):
+    gid = models.AutoField(primary_key=True)
+    nom_prov = models.CharField(max_length=50, blank=True, null=True)
+    cod_com = models.CharField(max_length=10, blank=True, null=True)
+    nom_com = models.CharField(max_length=50, blank=True, null=True)
+    territorio = models.CharField(max_length=50, blank=True, null=True)
+    region = models.CharField(max_length=15, blank=True, null=True)
+    num_uv = models.CharField(max_length=5, blank=True, null=True)
+    terr_com = models.CharField(max_length=40, blank=True, null=True)
+    zona = models.CharField(max_length=10, blank=True, null=True)
+    geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'uv'
+
+
+class UvFinal(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    nom_prov = models.CharField(db_column='NOM_PROV', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    cod_com = models.CharField(db_column='COD_COM', max_length=10, blank=True, null=True)  # Field name made lowercase.
+    nom_com = models.CharField(db_column='NOM_COM', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    territorio = models.CharField(db_column='TERRITORIO', max_length=50, blank=True, null=True)  # Field name made lowercase.
+    region = models.CharField(db_column='REGION', max_length=15, blank=True, null=True)  # Field name made lowercase.
+    num_uv = models.CharField(db_column='NUM_UV', max_length=5, blank=True, null=True)  # Field name made lowercase.
+    terr_com = models.CharField(db_column='TERR_COM', max_length=40, blank=True, null=True)  # Field name made lowercase.
+    zona = models.CharField(db_column='ZONA', max_length=10, blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'uv_final'
+
+
+class ZonificacionRbConafV03H181(models.Model):
+    fid = models.AutoField(primary_key=True)
+    the_geom = models.MultiPolygonField(srid=32718, blank=True, null=True)
+    zonas = models.CharField(db_column='ZONAS', max_length=25, blank=True, null=True)  # Field name made lowercase.
+    nombre = models.CharField(db_column='Nombre', max_length=70, blank=True, null=True)  # Field name made lowercase.
+    et_id = models.IntegerField(db_column='ET_ID', blank=True, null=True)  # Field name made lowercase.
+    area = models.FloatField(db_column='Area', blank=True, null=True)  # Field name made lowercase.
+    objects = models.GeoManager()
+
+    class Meta:
+        managed = False
+        db_table = 'zonificacion_rb_conaf_v03_h18_1'

@@ -1,3 +1,5 @@
-from django.contrib import admin
+from django.contrib.gis import admin
 
-# Register your models here.
+from models import CalifiTotal15Utm
+
+admin.site.register(CalifiTotal15Utm, admin.GeoModelAdmin)

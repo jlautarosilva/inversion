@@ -42,7 +42,7 @@ INSTALLED_APPS = (
 #This show import-export buttons in admin interface
     'import_export',
 #For generating django models
-    'django_extensions',
+#    'django_extensions',
 #Inversion
     'inv',
 #Load data from uft-8 shp to database
@@ -89,15 +89,16 @@ WSGI_APPLICATION = 'inversion.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'inversion',
+        'NAME': 'opengeo',
         'USER': 'postgres',
+        'PASSWORD': 'ugit2.postgres',
         #'PASSWORD': 'postgresql.lautaro',
     },
     'geonode':{
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'HOST': 'localhost',
         'PORT': '5432',
-        'NAME': 'califi_total15utm',
+        'NAME': 'geonode_data',
         'USER': 'postgres',
         'PASSWORD': 'ugit2.postgres',    
     }
